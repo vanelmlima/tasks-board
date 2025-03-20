@@ -19,7 +19,7 @@ import static vlml.project.persistence.config.ConnectionConfig.getConnection;
 public class MigrationStrategy {
     private final Connection connection;
 
-    private void executeMigration(){
+    public void executeMigration(){
         var originalOut = System.out;
         var originalErr = System.err;
         try(var fos = new FileOutputStream("liquibase.log")){
@@ -46,3 +46,4 @@ public class MigrationStrategy {
         }
     }
 }
+// todo: próximo vídeo: criando migrations
